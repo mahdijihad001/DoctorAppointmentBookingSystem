@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+.sectionContainer{
+    max-width: 1300px;
+    margin: 0px auto;
+}
