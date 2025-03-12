@@ -40,7 +40,7 @@ const Navbar = () => {
           }
 
           {
-            isAdmin && <button className='px-4 py-2 border-1 border-gray-300 rounded-full text-gray-500'><Link>Admin panel</Link></button>
+            isAdmin && <button className='px-4 py-2 border-1 border-gray-300 rounded-full text-gray-500 hidden md:block'><Link>Admin panel</Link></button>
           }
 
         </ul>
