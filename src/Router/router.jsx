@@ -3,6 +3,8 @@ import App from "../App";
 import Home from "../Page/Home/Home";
 import DoctorDetail from "../Component/DoctorDetail";
 import AllDoctors from "../Page/All Doctors/AllDoctors";
+import About from "../Page/About/About";
+import Contact from "../Page/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,14 @@ const router = createBrowserRouter([
         {
           path : "/allDoctor",
           element : <AllDoctors/>
+        },
+        {
+          path : "/about",
+          element : <About/>
+        },
+        {
+          path : "/contact",
+          element : <Contact/>
         },
         {
           path : "/doctorDetail/:id",
