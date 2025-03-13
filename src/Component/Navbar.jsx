@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { FaBars } from 'react-icons/fa'
 import { RxCross1 } from 'react-icons/rx'
 import { assets } from '../../../assets/assets_frontend/assets'
 import { IoIosArrowDropdown } from 'react-icons/io'
@@ -9,8 +8,8 @@ import { FaBarsStaggered } from 'react-icons/fa6'
 const Navbar = () => {
 
   const NavItem = [
-    { name: "Home", path: "/home" },
-    { name: "All Doctors", path: "/AllDoctors" },
+    { name: "Home", path: "/" },
+    { name: "All Doctors", path: "/allDoctor" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
@@ -27,7 +26,7 @@ const Navbar = () => {
 
 
   return (
-    <div className=' text-sm py-4 border-b border-b-gray-400 max-sm:px-4 md:px-10 sm:px-5'>
+    <div className=' text-sm py-4 border-b border-b-gray-400 max-sm:px-4 md:px-10 sm:px-5 fixed w-[100%] bg-white z-40'>
       <div className='flex items-center justify-between sectionContainer container'>
         {/* Menu Bar */}
         <FaBarsStaggered onClick={HandleMenuOpen} className='text-[28px] md:hidden' />
@@ -36,7 +35,7 @@ const Navbar = () => {
         {/* Menu */}
         <ul className='hidden md:flex items-center gap-5 font-medium'>
           {
-            NavItem.map((item, idx) => <NavLink key={idx}><li className='text-[16px] font-medium uppercase text-[#1F2937]'>{item.name}</li></NavLink>)
+            NavItem.map((item, idx) => <NavLink onClick={() => setMenuOpen(false)} to={item.path} key={idx}><li className='text-[16px] font-medium uppercase text-[#1F2937]'>{item.name}</li></NavLink>)
           }
 
           {
@@ -51,7 +50,7 @@ const Navbar = () => {
               <img className='w-8 rounded-full' src={assets.profile_pic} alt="" />
               <button><IoIosArrowDropdown className='text-[17px]' /></button>
 
-              <div className={`absolute top-0 right-0 p-14 text-base font-medium text-gray-600 z-20 hidden group-hover:block`}>
+              <div className={`absolute top-0 right-0 p-14 text-base font-medium text-gray-600 z-20 hidden group-hover:block z-50`}>
                 <div className='min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4'>
                   <p className='hover:text-black cursor-pointer'>My Profile</p>
                   <p className='hover:text-black cursor-pointer'>My Appointments</p>
@@ -73,7 +72,7 @@ const Navbar = () => {
         </div>
         <ul className='flex flex-col gap-3'>
           {
-            NavItem.map((item, idx) => <NavLink key={idx} className='text-[16px]'>{item.name}</NavLink>)
+            NavItem.map((item, idx) => <NavLink onClick={HandleMenuOpen} to={item.path} key={idx} className='text-[16px]'>{item.name}</NavLink>)
           }
         </ul>
       </div>

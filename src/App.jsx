@@ -6,6 +6,7 @@ const App = () => {
   return (
     <div>
       <Navbar/>
+      <div className="py-10"></div>
         <Outlet/>
       <Footer/>
     </div>

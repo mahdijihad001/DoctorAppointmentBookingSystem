@@ -8,7 +8,7 @@ const Speciality = () => {
                 <h1 className='text-3xl font-bold text-center mb-2.5'>Find by Speciality</h1>
                 <h2 className='w-3/6 text-center'>Simply browse through our extensive list of trusted doctors, schedule your appointment hassle-free.</h2>
             </div>
-            <div className='grid md:grid-cols-3 lg:grid-cols-6 items-center justify-center gap-[20px] py-[20px]'>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 items-center justify-center gap-[20px] py-[20px]'>
                 {
                     specialityData.map((item, idx) => (
                         <div className='flex flex-col items-center gap-2.5 hover:translate-y-[-10px] duration-500' key={idx}>
