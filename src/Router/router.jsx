@@ -5,6 +5,7 @@ import DoctorDetail from "../Component/DoctorDetail";
 import AllDoctors from "../Page/All Doctors/AllDoctors";
 import About from "../Page/About/About";
 import Contact from "../Page/Contact/Contact";
+import Profile from "../Page/Profile/Profile";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         {
           path : "/contact",
           element : <Contact/>
+        },
+        {
+          path : `/profile`,
+          element : <Profile/>
         },
         {
           path : "/doctorDetail/:id",
