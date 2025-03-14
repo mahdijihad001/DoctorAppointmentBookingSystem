@@ -53,7 +53,7 @@ const Navbar = () => {
               <div className={`absolute top-0 right-0 p-14 text-base font-medium text-gray-600 z-20 hidden group-hover:block z-50`}>
                 <div className='min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4'>
                   <Link to={"/profile"} className='hover:text-black cursor-pointer'>My Profile</Link>
-                  <p className='hover:text-black cursor-pointer'>My Appointments</p>
+                  <Link to={`/appointment`} className='hover:text-black cursor-pointer'>My Appointments</Link>
                   <p className='hover:text-black cursor-pointer'>Log Out</p>
                 </div>
               </div>

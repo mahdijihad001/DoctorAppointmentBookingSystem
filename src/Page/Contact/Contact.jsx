@@ -3,7 +3,7 @@ import { assets } from './../../assets/assets';
 
 const Contact = () => {
   return (
-    <div className='py-10 container sectionContainer sm:px-3.5 max-sm:px-3.5'>
+    <div className='py-10 container sectionContainer sm:px-3.5 max-sm:px-3.5 h-screen'>
       <h1 className='text-3xl font-bold text-[#4B5563] text-center'>
         CONTACT <span className='text-slate-500'>US</span>
       </h1>
@@ -25,9 +25,9 @@ const Contact = () => {
           </div>
           <h1 className='text-2xl font-semibold text-[#4B5563]'>Careers at PRESCRIPTO</h1>
           <h2 className='text-[#6B7280]'>Learn more about our teams and job openings.</h2>
-          <button className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300'>
+          {/* <button className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300'>
             Explore Jobs
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

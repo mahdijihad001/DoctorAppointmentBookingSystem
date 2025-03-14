@@ -93,16 +93,20 @@ const DoctorDetail = () => {
               />
             </div>
             <div>
-              <label htmlFor="patientAddress" className="block text-sm font-medium text-gray-700 mb-1">
-                Patient Address
+              <label htmlFor="gender" className="block text-sm font-medium text-gray-700 mb-1">
+                Patient Gender
               </label>
-              <input
-                type="text"
-                id="patientAddress"
-                placeholder="Enter patient address"
+              <select
+                id="gender"
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
-              />
+              >
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
             </div>
+
           </div>
 
           {/* Disease & Description */}
