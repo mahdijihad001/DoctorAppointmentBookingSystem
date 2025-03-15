@@ -15,7 +15,7 @@ const Trusted = () => {
       </div>
 
       {/* Image Section */}
-      <div className="w-full md:w-1/2 flex items-center justify-center">
+      <div className="w-full max-sm:hidden md:block md:w-1/2 flex items-center justify-center">
         <img className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-md h-auto" src={assets.appointment_img} alt="Appointment" />
       </div>
     </div>
