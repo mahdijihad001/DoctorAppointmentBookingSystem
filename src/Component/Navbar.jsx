@@ -18,11 +18,11 @@ const Navbar = () => {
   const [token, setToken] = useState(true);
   const [dropdown, setDropdown] = useState(false);
   const [isAdmin, setIsAdmin] = useState(true);
-    const [menuOpen, setMenuOpen] = useState(false);
-  
-    const HandleMenuOpen = () => {
-      setMenuOpen(!menuOpen);
-    }
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const HandleMenuOpen = () => {
+    setMenuOpen(!menuOpen);
+  }
 
 
   return (
@@ -38,10 +38,14 @@ const Navbar = () => {
             NavItem.map((item, idx) => <NavLink onClick={() => setMenuOpen(false)} to={item.path} key={idx}><li className='text-[16px] font-medium uppercase text-[#1F2937]'>{item.name}</li></NavLink>)
           }
 
-          {
-            isAdmin && <button className='px-4 py-2 border-1 border-gray-300 rounded-full text-gray-500 hidden md:block'><Link>Admin panel</Link></button>
-          }
-
+          {isAdmin && (
+            <Link
+              to="/dashboard"
+              className="px-4 py-2 border border-gray-300 rounded-full text-gray-500 hidden md:block"
+            >
+              Admin panel
+            </Link>
+          )}
         </ul>
         {/* Nav Button */}
         <div className='flex items-center gap-4'>
