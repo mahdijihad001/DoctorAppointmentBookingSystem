@@ -7,6 +7,8 @@ import About from "../Page/About/About";
 import Contact from "../Page/Contact/Contact";
 import Profile from "../Page/Profile/Profile";
 import Appointment from "../Page/Appointment/Appointment";
+import DashboardHome from "../Page/Dashboard/DashboardHome/DashboardHome";
+import AdminOverview from "../Page/Dashboard/DashboardComponents/AdminOverview";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,16 @@ const router = createBrowserRouter([
         }
     ]
   },
+  {
+    path : "/dashboard",
+    element : <DashboardHome/>,
+    children : [
+      {
+        path : "",
+        element : <AdminOverview/>
+      }
+    ]
+  }
 ]);
 
 

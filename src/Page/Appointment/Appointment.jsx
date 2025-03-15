@@ -11,7 +11,7 @@ const Appointment = () => {
       <div className="border border-gray-300 rounded-lg p-5">
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Left Side */}
-          <div className="flex gap-5 items-center">
+          <div className="flex flex-col md:flex-row gap-5 items-center">
             <div className="w-[120px] h-[120px] md:w-[140px] md:h-[140px] bg-[#EAEFFF] rounded-lg overflow-hidden">
               <img
                 className="w-full h-full object-cover"
@@ -34,10 +34,7 @@ const Appointment = () => {
           </div>
 
           {/* Right Side - Buttons */}
-          <div className="flex flex-col items-end space-y-2 mt-4 md:mt-0">
-            <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition">
-              Downlod Invoice
-            </button>
+          <div className="flex flex-col h-full mt-4 md:mt-0 justify-end items-end">
             <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition">
               Cancel appointment
             </button>
